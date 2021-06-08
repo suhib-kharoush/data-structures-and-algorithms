@@ -6,4 +6,4 @@
 
 
 
-![](img/codeChallenge1.PNG)
+![](img/reverse-array.JPG)
