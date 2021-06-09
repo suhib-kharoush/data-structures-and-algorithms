@@ -8,5 +8,3 @@
  # Approach & Efficiency:
  - I created a function then inside of it I put the list,
  after that I divided the list by 2 and used slice notation method.
-
-
