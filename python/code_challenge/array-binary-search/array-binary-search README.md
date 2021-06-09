@@ -1,6 +1,8 @@
-- I started at 7:30 pm
-- I finished at 11:00 pm
-- It took almost 3.5 hours 
-- the challenge was with the code itself to understand it and how it works.
+# Binary search:
+- This challenge asked me to find a method to search a value inside the list.
 
+# Whiteboard process:
 ![](img/binary_search.JPG)
+
+# Approach & Efficiency:
+- I just divided the list by 2 then I used if statement to check if the value is existed and where or not, if it exists it will return it or if not exists it will return -1.
