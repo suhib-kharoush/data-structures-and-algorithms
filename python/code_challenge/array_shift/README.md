@@ -1,5 +1,4 @@
 # shift array:
-
 - The challege asked me to add a value in the middle of the list using python withot using any built-in functions.
 
 # Whiteboard Process:
