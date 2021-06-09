@@ -1,9 +1,8 @@
 # reverse an array:
-- I started at 6:30pm
-- I finished at 10:20pm 
-- It took almost 4 hours 
-- The main challenge that I faced was with pushing to github, but I fix it
+- - The challenge asked me to revers a list using python but without using built-in functions.
 
 
+- ![](img/reverse-array.JPG)
 
-![](img/reverse-array.JPG)
+# Approach & Efficiency:
+- - I used a simple method called slice notation to reverse the list.
