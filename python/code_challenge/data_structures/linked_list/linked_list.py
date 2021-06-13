@@ -80,30 +80,8 @@ class LinkedList:
                    new_node.next = current.next
                    current.next = new_node
                 current = current.next
-
-
-
-
-
-
-
-
-
-    def kthFromEnd(self, k):
-        length = 0
-        current = self.head
-        while current:
-            length += 1
-            current = current.next
-        value = None
-        if length < k:
-            current = self.head
-            for i in range(0, length-k-1):
-                value = current.data
-                current = current.next
-        return value
     
- 
+   
 
 if __name__ == "__main__":
     ll1 = LinkedList()
