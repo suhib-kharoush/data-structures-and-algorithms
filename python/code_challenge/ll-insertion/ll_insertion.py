@@ -66,20 +66,48 @@ class LinkedList:
                 value = current.data
                 current = current.next
         return value
-    
-    @staticmethod
-    
-    def zipLists(ll1, ll2):
-        zipped_ll = LinkedList()
-        node1 = ll1.head
-        node2 = ll2.head
 
-        while node1 or node2:
-            if not node1 == None:
-                zipped_ll.append(node1.data)
-            if not node2 == None:
-                zipped_ll.append(node2.data)
-        return zipped_ll
+
+    def insertAfter(self, value, new_value):
+        if value is None:
+            return "wrong insertion"
+        else:
+            current = self.head
+            new_node = Node(new_value)
+            while current:
+                if current.value == value:
+                    new_node.next = current.next
+                    current.next = new_node
+                current = current.next
+
+    def insertBefore(self, value, new_value):
+        newInsertion = Node(new_value)
+        current = self.head
+        if current == None:
+            return "empty list"
+        else:
+            if current.value == value:
+                newInsertion.next = self.head
+                self.head = newInsertion
+            
+            while current.next:
+                if current.next.value == value:
+                    newInsertion.next = current.next
+                    current.next = newInsertion
+                    return
+                else:
+                    current = current.next
+            return "value not in the node"
+    
+    def empty_link_list(self):
+        self.head = None
+        return
+
+             
+    
+    
+
+
 
 if __name__ == "__main__":
     ll1 = LinkedList()
@@ -90,7 +118,4 @@ if __name__ == "__main__":
 
     
     print(ll1)
-
-
-
 
