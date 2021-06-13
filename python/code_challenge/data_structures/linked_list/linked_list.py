@@ -53,6 +53,42 @@ class LinkedList:
     def __repr__(self):
         pass
 
+    
+    def insertBefore(self, val, new_value):
+        newNode = Node(new_value)
+        current = self.head
+
+        if current == None:
+            return "list is empty"
+        else:
+            if current.value == val:
+                newNode.next = current.next
+                current.next = newNode
+                return
+            else:
+                current = current.next
+
+
+    def insertAfter(self, val, new_value):
+        if val is None:
+            return "wrong value"
+        else:
+            current = self.head
+            new_node = Node(new_value)
+            while current:
+                if current.value == val:
+                   new_node.next = current.next
+                   current.next = new_node
+                current = current.next
+
+
+
+
+
+
+
+
+
     def kthFromEnd(self, k):
         length = 0
         current = self.head
@@ -67,19 +103,7 @@ class LinkedList:
                 current = current.next
         return value
     
-    @staticmethod
-    
-    def zipLists(ll1, ll2):
-        zipped_ll = LinkedList()
-        node1 = ll1.head
-        node2 = ll2.head
-
-        while node1 or node2:
-            if not node1 == None:
-                zipped_ll.append(node1.data)
-            if not node2 == None:
-                zipped_ll.append(node2.data)
-        return zipped_ll
+ 
 
 if __name__ == "__main__":
     ll1 = LinkedList()
