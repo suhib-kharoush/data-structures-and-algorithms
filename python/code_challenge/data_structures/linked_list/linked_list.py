@@ -53,61 +53,35 @@ class LinkedList:
     def __repr__(self):
         pass
 
-    def kthFromEnd(self, k):
-        length = 0
+    
+    def insertBefore(self, val, new_value):
+        newNode = Node(new_value)
         current = self.head
-        while current:
-            length += 1
-            current = current.next
-        value = None
-        if length < k:
-            current = self.head
-            for i in range(0, length-k-1):
-                value = current.data
+
+        if current == None:
+            return "list is empty"
+        else:
+            if current.value == val:
+                newNode.next = current.next
+                current.next = newNode
+                return
+            else:
                 current = current.next
-        return value
 
 
-    def insertAfter(self, value, new_value):
-        if value is None:
-            return "wrong insertion"
+    def insertAfter(self, val, new_value):
+        if val is None:
+            return "wrong value"
         else:
             current = self.head
             new_node = Node(new_value)
             while current:
-                if current.value == value:
-                    new_node.next = current.next
-                    current.next = new_node
+                if current.value == val:
+                   new_node.next = current.next
+                   current.next = new_node
                 current = current.next
-
-    def insertBefore(self, value, new_value):
-        newInsertion = Node(new_value)
-        current = self.head
-        if current == None:
-            return "empty list"
-        else:
-            if current.value == value:
-                newInsertion.next = self.head
-                self.head = newInsertion
-            
-            while current.next:
-                if current.next.value == value:
-                    newInsertion.next = current.next
-                    current.next = newInsertion
-                    return
-                else:
-                    current = current.next
-            return "value not in the node"
     
-    def empty_link_list(self):
-        self.head = None
-        return
-
-             
-    
-    
-
-
+   
 
 if __name__ == "__main__":
     ll1 = LinkedList()
@@ -118,4 +92,7 @@ if __name__ == "__main__":
 
     
     print(ll1)
+
+
+
 
