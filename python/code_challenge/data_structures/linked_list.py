@@ -67,19 +67,7 @@ class LinkedList:
                 current = current.next
         return value
     
-    @staticmethod
-    
-    def zipLists(ll1, ll2):
-        zipped_ll = LinkedList()
-        node1 = ll1.head
-        node2 = ll2.head
-
-        while node1 or node2:
-            if not node1 == None:
-                zipped_ll.append(node1.data)
-            if not node2 == None:
-                zipped_ll.append(node2.data)
-        return zipped_ll
+   
 
 if __name__ == "__main__":
     ll1 = LinkedList()
