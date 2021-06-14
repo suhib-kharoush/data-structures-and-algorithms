@@ -1,4 +1,4 @@
-from typing import Counter, OrderedDict
+from typing import Counter
 
 class Node:
     def __init__(self, value):
@@ -11,9 +11,9 @@ class LinkedList:
 
 
     def insert(self, value):
-        new_node = Node(value)
-        new_node.next = self.head
-        self.head = new_node
+        new_value = Node(value)
+        new_value.next = self.head
+        self.head = new_value
 
     def includes(self, x):
         current = self.head
@@ -31,7 +31,7 @@ class LinkedList:
         current = self.head
         try:
             while current:
-                output += f"{ {current.value} }->"
+                output += f"{ {current.value} } --->"
                 current = current.next
             output += f"{None}"
             return output
@@ -39,15 +39,15 @@ class LinkedList:
             print("wrong insertion")
 
     def append(self, value):
-        new_node = Node(value)
+        new_value = Node(value)
         current = self.head
         if not self.head:
-            self.head = new_node
+            self.head = new_value
         else:
             current = self.head
             while current.next:
                 current = current.next
-            current.next = new_node
+            current.next = new_value
 
     def __repr__(self):
         pass
@@ -61,8 +61,8 @@ class LinkedList:
             return "list is empty"
         else:
             if current.value == val:
-                newNode.next = self.head
-                self.head = newNode
+                newNode.next = current.next
+                current.next = newNode
                 return
             else:
                 current = current.next
@@ -79,33 +79,8 @@ class LinkedList:
                    new_node.next = current.next
                    current.next = new_node
                 current = current.next
-
-    def kthFromEnd(self, k, from_node=None):
-        current = self.head
-        if current == None:
-            return print("linked list is empty")
-        if k < 0:
-            return print("k should be a larger or equal to 0")
-
-        length = 0
-        while current is not None:
-            current = current.next
-            length += 1
-        if k > length:
-             print("kth is greater than the linked-list")
-             return
-
-        current = self.head
-        if from_node:
-            for i in range(from_node, length - k - 2):
-                current = current.next
-            print(current.value)
-        else:
-            for i in range(0, length - k - 1):
-                current = current.next
-            print(current.value)
-  
-
+    
+   
 
 if __name__ == "__main__":
     ll1 = LinkedList()
@@ -116,4 +91,3 @@ if __name__ == "__main__":
 
     
     print(ll1)
-
