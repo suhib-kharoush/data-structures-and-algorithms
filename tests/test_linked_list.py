@@ -27,13 +27,13 @@ def test_insert():
 
 def test_head():
     l_list.insert(5)
-    l_list.insert(3)
-    l_list.insert(9)
+    l_list.insert(10)
+    l_list.insert(18)
     actual = l_list.head.value
-    expect = 9
+    expect = 18
     assert actual == expect
     actual2 = l_list.head.next.value
-    expect2 = 3
+    expect2 = 10
     assert actual2 == expect2
 
 
@@ -41,26 +41,13 @@ def test_head():
 
 def test_return():
     actual = l_list.__str__()
-    expect = "{9} --->{3} --->{5} --->{5} --->None"
+    expect = "{18} --->{10} --->{5} --->{5} --->None"
     assert actual == expect
 
 
 def test_append():
     l_list.append(8)
     actual = l_list.__str__()
-    expect = "{9} --->{3} --->{5} --->{5} --->{8} --->None"
-    assert actual == expect
-
-
-def test_insert_before():
-    l_list.insertBefore(6, 20)
-    actual = l_list.__str__()
-    expect = "{9} --->{3} --->{5} --->{5} --->{8} --->None"
-    assert actual == expect
-
-def test_insert_after():
-    l_list.insertAfter(10, 6)
-    actual = l_list.__str__()
-    expect = "{9} --->{3} --->{5} --->{5} --->{8} --->None"
+    expect = "{18} --->{10} --->{5} --->{5} --->{8} --->None"
     assert actual == expect
 

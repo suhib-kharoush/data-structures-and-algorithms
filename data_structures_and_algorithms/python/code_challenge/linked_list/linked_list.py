@@ -1,4 +1,4 @@
-from typing import Counter, OrderedDict
+from typing import Counter
 
 class Node:
     def __init__(self, value):
@@ -11,9 +11,9 @@ class LinkedList:
 
 
     def insert(self, value):
-        new_node = Node(value)
-        new_node.next = self.head
-        self.head = new_node
+        new_value = Node(value)
+        new_value.next = self.head
+        self.head = new_value
 
     def includes(self, x):
         current = self.head
@@ -31,7 +31,7 @@ class LinkedList:
         current = self.head
         try:
             while current:
-                output += f"{ {current.value} }->"
+                output += f"{ {current.value} } --->"
                 current = current.next
             output += f"{None}"
             return output
@@ -39,15 +39,15 @@ class LinkedList:
             print("wrong insertion")
 
     def append(self, value):
-        new_node = Node(value)
+        new_value = Node(value)
         current = self.head
         if not self.head:
-            self.head = new_node
+            self.head = new_value
         else:
             current = self.head
             while current.next:
                 current = current.next
-            current.next = new_node
+            current.next = new_value
 
     def __repr__(self):
         pass
@@ -61,8 +61,8 @@ class LinkedList:
             return "list is empty"
         else:
             if current.value == val:
-                newNode.next = self.head
-                self.head = newNode
+                newNode.next = current.next
+                current.next = newNode
                 return
             else:
                 current = current.next
@@ -117,4 +117,3 @@ if __name__ == "__main__":
 
     
     print(ll1)
-
