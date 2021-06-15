@@ -2,8 +2,7 @@ import pytest
 
 from unittest.mock import patch
 
-from data_structures_and_algorithms.python.code_challenge.linked_list.linked_list import Node, LinkedList
-
+from data_structures_and_algorithms.python.Data-Structure.linked_list.linked_list import Node, LinkedLis
 
 def test_import():
     assert LinkedList
