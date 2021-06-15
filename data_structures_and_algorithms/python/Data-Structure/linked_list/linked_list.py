@@ -111,6 +111,8 @@ class LinkedList:
         return
 
 
+
+
 if __name__ == "__main__":
     ll1 = LinkedList()
     ll1.insert(1)
