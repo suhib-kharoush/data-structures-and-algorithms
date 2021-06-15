@@ -105,6 +105,7 @@ class LinkedList:
                 current = current.next
             print(current.value)
   
+  
     def empty_ll(self):
         self.head = None
         return
