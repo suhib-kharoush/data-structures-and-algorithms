@@ -79,8 +79,7 @@ class LinkedList:
                    new_node.next = current.next
                    current.next = new_node
                 current = current.next
-                
-      
+
     def kthFromEnd(self, k, from_node=None):
         current = self.head
         if current == None:
@@ -106,7 +105,11 @@ class LinkedList:
                 current = current.next
             print(current.value)
   
-   
+  
+    def empty_ll(self):
+        self.head = None
+        return
+
 
 if __name__ == "__main__":
     ll1 = LinkedList()
